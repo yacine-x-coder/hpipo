@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#176b38">
+  <title>Photos | HPIPO</title>
+  <link rel="stylesheet" href="css/index.css">
+  <script src="js/index.js" defer></script>
+</head>
+<body>
+  <div class="top-strip">
+    <span>💚💛 HPIPO — L'esprit du quartier</span>
+    <a href="https://web.facebook.com/chefhpipo/?locale=fr_FR&_rdc=1&_rdr#" target="_blank" rel="noopener noreferrer">Notre Facebook ↗</a>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">H</span><span>HPIPO<small>Restaurant de quartier</small></span></a>
+    <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+    <nav class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="menu.html">La carte</a>
+      <a class="active" href="gallery.html">Photos</a>
+      <a href="about.html">À propos</a>
+      <a class="nav-contact" href="contact.html">Nous trouver ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="section-wrap reveal">
+        <div class="breadcrumb"><a href="index.html">Accueil</a> / Photos</div>
+        <span class="eyebrow">L'UNIVERS HPIPO</span>
+        <h1>Un petit aperçu<span style="color:var(--green)">.</span></h1>
+        <p>Les images du restaurant et de son univers. Les photos présentées doivent correspondre au vrai HPIPO.</p>
+      </div>
+    </section>
+
+    <section class="content-section section-wrap">
+      <div class="filter-row" data-filter-group=".gallery-card">
+        <button class="filter-btn active" data-filter="all" aria-pressed="true">Toutes les photos</button>
+        <button class="filter-btn" data-filter="restaurant" aria-pressed="false">Le restaurant</button>
+        <button class="filter-btn" data-filter="ambiance" aria-pressed="false">Ambiance</button>
+      </div>
+
+      <div class="gallery-grid">
+        <article class="gallery-card reveal" data-category="restaurant">
+          <a href="assets/resturent.png" target="_blank" rel="noopener noreferrer">
+            <img src="assets/resturent.png" alt="Photo du restaurant HPIPO" loading="lazy">
+          </a>
+          <div class="gallery-caption">Le restaurant HPIPO<small>Photo préparée pour le site</small></div>
+        </article>
+
+        <article class="gallery-card reveal" data-category="restaurant">
+          <a href="assets/resturent.png" target="_blank" rel="noopener noreferrer">
+            <img src="assets/resturent.png" alt="Vue du restaurant HPIPO" loading="lazy">
+          </a>
+          <div class="gallery-caption">Notre petit coin<small>Ajoutez une autre photo réelle ici</small></div>
+        </article>
+
+        <article class="gallery-card reveal" data-category="ambiance">
+          <a href="assets/resturent.png" target="_blank" rel="noopener noreferrer">
+            <img src="assets/resturent.png" alt="Univers du restaurant HPIPO" loading="lazy">
+          </a>
+          <div class="gallery-caption">L'esprit HPIPO<small>Ajoutez une photo d'ambiance réelle ici</small></div>
+        </article>
+      </div>
+
+      <div class="final-cta reveal" style="margin-top:55px">
+        <div>
+          <span class="eyebrow">SUIVEZ-NOUS</span>
+          <h2>Plus de photos sur Facebook.</h2>
+          <p>Retrouvez les publications officielles du restaurant.</p>
+        </div>
+        <a class="btn btn-yellow" href="https://web.facebook.com/chefhpipo/?locale=fr_FR&_rdc=1&_rdr#" target="_blank" rel="noopener noreferrer">Ouvrir Facebook ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="index.html"><span class="brand-mark">H</span><span>HPIPO<small>Restaurant de quartier</small></span></a>
+    <p>Simplement HPIPO. 💚💛</p>
+    <span>© <span class="current-year"></span> HPIPO</span>
+  </footer>
+  <button class="back-top" aria-label="Retour en haut">↑</button>
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Notre Menu | Restaurant HPIPO</title>
+
+    <link rel="stylesheet" href="css/index.css">
+
+    <style>
+        .menu-intro {
+            text-align: center;
+            padding: 55px 20px 30px;
+        }
+
+        .menu-intro h1 {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+            color: #d8b735;
+        }
+
+        .menu-intro p {
+            max-width: 650px;
+            margin: auto;
+            line-height: 1.8;
+        }
+
+        .filter-row {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 25px 15px 35px;
+        }
+
+        .filter-btn {
+            border: 2px solid #d8b735;
+            background: #fff;
+            color: #333;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #d8b735;
+            color: #111;
+        }
+
+        .food-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 25px;
+            padding: 20px 6% 60px;
+        }
+
+        .food-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.13);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .food-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .food-card img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .food-info {
+            padding: 18px;
+            text-align: center;
+        }
+
+        .food-info h2 {
+            color: rgb(134, 103, 75);
+            font-size: 1.3rem;
+            margin: 0 0 10px;
+        }
+
+        .food-info p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .food-price {
+            color: #218838;
+            font-weight: bold;
+        }
+
+        .menu-note {
+            text-align: center;
+            margin: 0 15px 35px;
+            color: #555;
+        }
+
+        .food-card.hidden {
+            display: none;
+        }
+
+        @media (max-width: 600px) {
+            .menu-intro h1 {
+                font-size: 2rem;
+            }
+
+            .food-grid {
+                grid-template-columns: 1fr;
+                padding-left: 7%;
+                padding-right: 7%;
+            }
+
+            .food-card img {
+                height: 230px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- القائمة الرئيسية -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">HPIPO</a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="menu.html" class="active">Menu</a></li>
+                <li><a href="gallery.html">Galerie</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="menu-toggle" aria-label="Ouvrir le menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- مقدمة القائمة -->
+    <main>
+        <section class="menu-intro">
+            <h1>Notre Menu 🍽️</h1>
+            <p>
+                Bienvenue chez HPIPO ! Découvrez nos plats et nos spécialités.
+                Nous vous accueillons avec plaisir à La Vigerie, Alger.
+            </p>
+        </section>
+
+        <!-- أزرار تصفية الأطباق -->
+        <div class="filter-row">
+            <button class="filter-btn active" data-filter="all">
+                Tout
+            </button>
+
+            <button class="filter-btn" data-filter="plats">
+                Plats
+            </button>
+
+            <button class="filter-btn" data-filter="accompagnements">
+                Accompagnements
+            </button>
+
+            <button class="filter-btn" data-filter="autres">
+                Autres
+            </button>
+        </div>
+
+        <!-- صور الأطباق -->
+        <section class="food-grid">
+
+            <article class="food-card" data-category="plats">
+                <img src="assets/adase.png" alt="Adase" loading="lazy">
+                <div class="food-info">
+                    <h2>Adase</h2>
+                    <p>Découvrez ce plat chez HPIPO.</p>
+                    <div class="food-price">Prix à confirmer</div>
+                </div>
+            </article>
+
+            <article class="food-card" data-category="autres">
+                <img src="assets/filfile.png" alt="Filfile" loading="lazy">
+                <div class="food-info">
+                    <h2>Filfile</h2>
+                    <p>Découvrez ce produit chez HPIPO.</p>
+                    <div class="food-price">Prix à confirmer</div>
+                </div>
+            </article>
+
+            <article class="food-card" data-category="accompagnements">
+                <img src="assets/khodar.png" alt="Khodar" loading="lazy">
+                <div class="food-info">
+                    <h2>Khodar</h2>
+                    <p>Découvrez nos légumes.</p>
+                    <div class="food-price">Prix à confirmer</div>
+                </div>
+            </article>
+
+            <article class="food-card" data-category="accompagnements">
+                <img src="assets/khodar2.png" alt="Khodar 2" loading="lazy">
+                <div class="food-info">
+                    <h2>Khodar 2</h2>
+                    <p>Découvrez cette préparation chez HPIPO.</p>
+                    <div class="food-price">Prix à confirmer</div>
+                </div>
+            </article>
+
+            <article class="food-card" data-category="plats">
+                <img src="assets/lesaba.png" alt="Lasaba" loading="lazy">
+                <div class="food-info">
+                    <h2>Lasaba</h2>
+                    <p>Découvrez ce plat chez HPIPO.</p>
+                    <div class="food-price">Prix à confirmer</div>
+                </div>
+            </article>
+
+            <article class="food-card" data-category="plats">
+                <img src="assets/lekich.png" alt="Lekiche" loading="lazy">
+                <div class="food-info">
+                    <h2>Lekiche</h2>
+                    <p>Découvrez ce plat chez HPIPO.</p>
+                    <div class="food-price">Prix à confirmer</div>
+                </div>
+            </article>
+
+            <article class="food-card" data-category="plats">
+                <img src="assets/reshta.png" alt="Reshta" loading="lazy">
+                <div class="food-info">
+                    <h2>Reshta</h2>
+                    <p>Découvrez ce plat traditionnel chez HPIPO.</p>
+                    <div class="food-price">Prix à confirmer</div>
+                </div>
+            </article>
+
+            <article class="food-card" data-category="accompagnements">
+                <img src="assets/salade.png" alt="Salade" loading="lazy">
+                <div class="food-info">
+                    <h2>Salade</h2>
+                    <p>Une salade à découvrir chez HPIPO.</p>
+                    <div class="food-price">Prix à confirmer</div>
+                </div>
+            </article>
+
+            <article class="food-card" data-category="accompagnements">
+                <img src="assets/shlada.png" alt="Shlada" loading="lazy">
+                <div class="food-info">
+                    <h2>Shlada</h2>
+                    <p>Découvrez cette salade chez HPIPO.</p>
+                    <div class="food-price">Prix à confirmer</div>
+                </div>
+            </article>
+
+            <article class="food-card" data-category="plats">
+                <img src="assets/skalop.png" alt="Skalop" loading="lazy">
+                <div class="food-info">
+                    <h2>Skalop</h2>
+                    <p>Découvrez ce plat chez HPIPO.</p>
+                    <div class="food-price">Prix à confirmer</div>
+                </div>
+            </article>
+
+        </section>
+
+        <p class="menu-note">
+            Pour connaître les prix et les disponibilités, contactez le restaurant.
+        </p>
+    </main>
+
+    <!-- نهاية الصفحة -->
+    <footer class="site-footer">
+        <p>© HPIPO — La Vigerie, Alger</p>
+    </footer>
+
+    <button class="back-top" aria-label="Retour en haut" title="Retour en haut">
+        ↑
+    </button>
+
+    <script src="js/index.js"></script>
+
+    <!-- تصفية الأطباق -->
+    <script>
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        const foodCards = document.querySelectorAll(".food-card");
+
+        filterButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+                const filter = button.dataset.filter;
+
+                filterButtons.forEach((btn) => {
+                    btn.classList.remove("active");
+                });
+
+                button.classList.add("active");
+
+                foodCards.forEach((card) => {
+                    const category = card.dataset.category;
+
+                    if (filter === "all" || category === filter) {
+                        card.classList.remove("hidden");
+                    } else {
+                        card.classList.add("hidden");
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
