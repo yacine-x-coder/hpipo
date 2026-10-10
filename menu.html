@@ -131,25 +131,76 @@
 <body>
 
     <!-- القائمة الرئيسية -->
-    <header>
-        <nav class="navbar">
-            <a href="index.html" class="logo">HPIPO</a>
+<!-- ===== HPIPO NAVBAR ===== -->
+<header class="hpipo-header">
+    <nav class="hpipo-navbar">
 
-            <ul class="nav-links">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="menu.html" class="active">Menu</a></li>
-                <li><a href="gallery.html">Galerie</a></li>
-                <li><a href="about.html">À propos</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+        <!-- Logo -->
+        <a href="index.html" class="hpipo-logo">
+            <span class="logo-icon">🍽️</span>
+            <span class="logo-text">
+                <strong>HPI<span>PO</span></strong>
+                <small>LE GOÛT DU QUARTIER</small>
+            </span>
+        </a>
 
-            <div class="menu-toggle" aria-label="Ouvrir le menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-    </header>
+        <!-- Navigation -->
+        <ul class="hpipo-nav-links">
+            <li>
+                <a href="index.html">
+                    <span>⌂</span> Accueil
+                </a>
+            </li>
+
+            <li>
+                <a href="menu.html" class="active">
+                    <span>☰</span> Menu
+                </a>
+            </li>
+
+            <li>
+                <a href="gallery.html">
+                    <span>▧</span> Galerie
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html">
+                    <span>✦</span> À propos
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html">
+                    <span>✉</span> Contact
+                </a>
+            </li>
+        </ul>
+
+        <!-- Contact Button -->
+        <a
+            href="https://web.facebook.com/chefhpipo/?locale=fr_FR&_rdc=1&_rdr#"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hpipo-contact-btn"
+        >
+            <span>★</span> Suivez-nous
+        </a>
+
+        <!-- Mobile Button -->
+        <button
+            class="hpipo-menu-toggle"
+            type="button"
+            aria-label="Ouvrir le menu"
+            aria-expanded="false"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </nav>
+</header>
 
     <!-- مقدمة القائمة -->
     <main>
